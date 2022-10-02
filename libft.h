@@ -6,19 +6,28 @@
 /*   By: sade-la- <sade-la-@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:35:08 by sade-la-          #+#    #+#             */
-/*   Updated: 2022/10/02 00:13:55 by sade-la-         ###   ########.fr       */
+/*   Updated: 2022/10/02 06:50:04 by sade-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+// Librerías
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
 # include <ctype.h>
 
+// Definición de la estructura s_list:
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+// Prototipos
 int		ft_isprint(int c);
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
@@ -53,5 +62,11 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
+t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
 #endif
