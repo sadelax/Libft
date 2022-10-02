@@ -6,13 +6,13 @@
 /*   By: sade-la- <sade-la-@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 21:11:01 by sade-la-          #+#    #+#             */
-/*   Updated: 2022/10/02 00:11:49 by sade-la-         ###   ########.fr       */
+/*   Updated: 2022/10/02 20:47:15 by sade-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned long long int	ft_check_long(unsigned long long int res, int sign)
+static unsigned long long int	ft_check_long(unsigned long long int res, int sign)
 {
 	if (res > 9223372036854775806 && sign > 0)
 		return (-1);

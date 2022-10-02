@@ -6,7 +6,7 @@
 /*   By: sade-la- <sade-la-@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 18:18:35 by sade-la-          #+#    #+#             */
-/*   Updated: 2022/10/02 00:26:05 by sade-la-         ###   ########.fr       */
+/*   Updated: 2022/10/02 20:48:39 by sade-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (dst);
 }
-/*
-char	ft_func(unsigned int num, char c)
-{
-	(void)num;
-	return (c - 32);
-}
-
-int	main()
-{
-	char	(*f)(unsigned int, char);
-	f = &ft_func;
-	printf("%s", ft_strmapi("", f));
-}
-*/

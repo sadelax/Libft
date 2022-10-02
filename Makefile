@@ -18,7 +18,6 @@ OBJSB	= ${SRCSB:.c=.o}
 CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -f
-DEPS	= libft.h
 AR		= ar -rcs
 ARF		= ranlib
 BONUS	= .
