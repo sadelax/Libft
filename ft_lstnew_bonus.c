@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sade-la- <sade-la-@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 02:31:35 by sade-la-          #+#    #+#             */
-/*   Updated: 2022/10/02 06:56:03 by sade-la-         ###   ########.fr       */
+/*   Updated: 2022/10/02 20:24:31 by sade-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-/*
-int	main(void)
-{
-	t_list	*cat;
-	cat = ft_lstnew("I love cats");
-	printf("%s", cat->content);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: sade-la- <sade-la-@student.42.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 03:51:57 by sade-la-          #+#    #+#             */
-/*   Updated: 2022/10/02 07:37:54 by sade-la-         ###   ########.fr       */
+/*   Updated: 2022/10/02 19:09:26 by sade-la-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list	*clear;
+
 	if (!lst)
-		return (NULL);
-	while(*lst->next != 	NULL)
-		(*del)(lst->content);
+		return ;
+	while (*lst)
+	{
+		clear = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = clear;
+	}
+	return ;
 }
